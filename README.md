@@ -1,6 +1,6 @@
-###**Laftel_Assignment**
+### **Laftel_Assignment**
 
-**1.  Read numbers**
+**1. Read numbers**
 
 숫자 배열을 받아서, 연속된 숫자를 문자열로 바꿔줍니다.
 
