@@ -72,15 +72,24 @@ public class ReverseWithTag {
 				if(!tmp.endsWith(">")) {
 					tmp = tmp + ">";
 				}
+				String tmp2 = tmp.substring(0,tmp.length()-1);
+				int count = 1;
 				tmp = tmp.replaceFirst("<", "</");
 				//지금 찾은 여는 태그 다음부터 이 태그의 닫는 태그가 있는지 찾은 후, 찾았다면 원래 ArrayList에서 서로의 위치를 바꿔주고, 다음으로 넘어간다.
 				//지금 태그가 여는 태그만 있고 닫는 태그가 없는 경우(<br>같은)에는 아무런 동작을 취하지 않는다.
 				if(i != tSize) {
 					for(int j = i+1; j < tSize ; j ++) {
+						if(tag2.get(j).startsWith(tmp2)) {
+							count++;
+						}
 						if(tmp.equals(tag2.get(j))) {
+							count--;
+						}
+						if(count == 0) {
 							tag.set(j, tag.get(i));
 							tag.set(i, tmp);
-							continue;
+							count = 1;
+							break;
 						}
 					}	
 				}

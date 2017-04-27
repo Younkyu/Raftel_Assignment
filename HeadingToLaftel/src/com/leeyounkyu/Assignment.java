@@ -43,7 +43,7 @@ public class Assignment {
 		
 		System.out.println("\n-----------2. ReverseWithTag-----------\n");
 		
-		String input = "The quick <font color=\"brown\">brown <br><i>fox</i><br></font> jumps <font color=\"yellow\">over</font> the <i>lazy</i> dog";
+		String input = "The <font color=\"red\">quick <font color=\"brown\">brown <br><i>fox</i><br></font> jumps <font color=\"yellow\">over</font> the </font><i>lazy</i> dog";
 		
 		ReverseWithTag Rwt = new ReverseWithTag();
 		System.out.println("input = " + input);
